@@ -1,0 +1,24 @@
+# == Schema Information
+# Schema version: 20110607044905
+#
+# Table name: promotions
+#
+#  id             :integer         not null, primary key
+#  rank           :string(255)
+#  user_id        :integer
+#  promotion_date :date
+#  created_at     :datetime
+#  updated_at     :datetime
+#
+
+class Promotion < ActiveRecord::Base
+
+  belongs_to :user
+
+  validates :rank,            :presence => true
+  validates :user_id,         :presence => true
+  validates :promotion_date,  :presence => true
+
+  default_scope :order => 'promotions.created_at desc'
+
+end

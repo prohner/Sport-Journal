@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SportJournal</title>
+  <%= stylesheet_link_tag :all %>
+  <%= stylesheet_link_tag("http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/themes/base/jquery-ui.css") %>
+  <%= javascript_include_tag :defaults %>
+  <%= csrf_meta_tag %>
+</head>
+<body class="karatejournal">
+
+<div class="main_container round">
+
+   <section class="round">
+      <% flash.each do |key, value| %>
+         <div class="flash <%= key %>"><%= value %></div>
+      <% end%>
+
+      <%= yield %>
+   </section>
+   
+   <%= debug(params) if Rails.env.development? %>
+</div>
+<%= link_to "Add a user", new_user_path %>
+</body>
+</html>

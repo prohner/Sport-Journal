@@ -1,0 +1,40 @@
+<%= form_for @workout_session do |f| %>
+
+   <fieldset>
+      <legend>Your Latest Workout</legend>
+      <%= f.label :descripton %><br/>
+      <%= f.text_area :description, :cols => "50", :rows => "5" %>
+      <br />
+      <%= link_to_function "Add Technique", :id => "add_technique" %>
+
+      <div class="actions">
+      <%= f.submit "Submit" %>
+      </div>
+  
+  </fieldset>
+<% end %>
+
+<script>
+$(document).ready(function(){
+  $('#add_technique').click(function(event){ 
+     $("#subscription_dialog").dialog({modal:true, 
+                                       title:'Techniques', 
+                                       position:[event.clientX,event.clientY]});
+
+    return false; //cancel the browser's traditional event.
+  });
+});
+
+</script>
+
+<%= form_tag '#', :id => 'new_subscription' do%>
+    <div id="subscription_dialog" class="modal_dialog" style="display:none;">
+
+        <div class="category-wrapper">
+            <div class="category">
+               Here's the stuff
+            </div>
+        </div>
+</div>
+
+<% end %>

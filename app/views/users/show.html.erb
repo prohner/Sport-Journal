@@ -1,0 +1,20 @@
+
+<table class="profile" summary="Profile Information">
+   <tr>
+      <td class="main">
+         <h1><%= @user.firstname %> <%= @user.lastname %></h1>
+
+         <div class="workouts">
+               <%= render "workout_sessions/workout_session_form" %>
+               <br />
+               <%= render @user.workout_sessions %>
+
+         </div>
+      </td>
+      <td class="sidebar round">
+         Style: <span class="martial_arts_style"><%= @user.style %></span>
+         <%= render 'promotions/promotion_history' %>
+      </td>
+   </tr>
+</table>
+

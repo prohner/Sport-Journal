@@ -1,0 +1,24 @@
+# == Schema Information
+# Schema version: 20110607044905
+#
+# Table name: promotions
+#
+#  id             :integer         not null, primary key
+#  rank           :string(255)
+#  user_id        :integer
+#  promotion_date :date
+#  created_at     :datetime
+#  updated_at     :datetime
+#
+
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+black:
+  rank: Black belt
+  user_id: 1
+  promotion_date: 2011-01-01
+
+red:
+  rank: Red belt
+  user_id: 1
+  promotion_date: 2009-12-12

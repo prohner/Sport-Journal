@@ -1,0 +1,11 @@
+<table class="promotions" summary="User promotions">
+   <tr>
+      <td colspan="2">
+         Promotion History
+         <!--%= link_to "Promotion History", promotions_path %-->
+      </td>
+   </tr>
+   <% unless @user.promotions.empty? %>
+         <%= render @user.promotions %>
+   <% end %>
+</table>
