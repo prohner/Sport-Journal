@@ -1,0 +1,25 @@
+# == Schema Information
+# Schema version: 20110905214414
+#
+# Table name: styles
+#
+#  id                :integer         not null, primary key
+#  name              :string(255)
+#  country_of_origin :string(255)
+#  created_at        :datetime
+#  updated_at        :datetime
+#
+
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+tsd:
+  name: Tang Soo Do
+  country_of_origin: Korea
+
+tkd:
+  name: Tae Kwon Do
+  country_of_origin: Korea
+  
+judo:
+  name: Judo
+  country_of_origin: Japan

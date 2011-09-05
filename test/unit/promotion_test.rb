@@ -1,7 +1,12 @@
 require 'test_helper'
 
 class PromotionTest < ActiveSupport::TestCase
-  # Replace this with your real tests.
+  test "should belong to a style" do
+    rank_black  = promotions(:black)
+
+    assert rank_black.valid?
+  end
+
   test "the truth" do
     assert true
   end

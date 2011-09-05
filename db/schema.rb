@@ -10,12 +10,19 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110609033640) do
+ActiveRecord::Schema.define(:version => 20110905214414) do
 
   create_table "promotions", :force => true do |t|
     t.string   "rank"
     t.integer  "user_id"
     t.date     "promotion_date"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "styles", :force => true do |t|
+    t.string   "name"
+    t.string   "country_of_origin"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

@@ -14,6 +14,7 @@
 class Promotion < ActiveRecord::Base
 
   belongs_to :user
+  belongs_to :style
 
   validates :rank,            :presence => true
   validates :user_id,         :presence => true
