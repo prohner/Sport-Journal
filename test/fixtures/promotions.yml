@@ -1,5 +1,5 @@
 # == Schema Information
-# Schema version: 20110607044905
+# Schema version: 20110907041740
 #
 # Table name: promotions
 #
@@ -9,6 +9,7 @@
 #  promotion_date :date
 #  created_at     :datetime
 #  updated_at     :datetime
+#  style_id       :integer
 #
 
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html

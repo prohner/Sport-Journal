@@ -3,6 +3,7 @@ namespace :db do
   desc "Fill database with sample data"
   task :populate => :environment do
     Rake::Task['db:reset'].invoke
+    make_styles
     make_users
     make_promotions
     make_workouts
@@ -39,9 +40,21 @@ end
 
 def make_promotions
   user = User.first
+  style = Style.first
   user.promotions << Promotion.new( :rank  => "black",
-                                    :promotion_date => "6/2/2011")
+                                    :promotion_date => "6/2/2011",
+                                    :style => style)
   user.promotions << Promotion.new( :rank  => "red",
-                                    :promotion_date => "1/2/2010")
+                                    :promotion_date => "1/2/2010",
+                                    :style => style)
   user.save!
+end
+
+def make_styles
+  style = Style.create!(  :name               => "Tang Soo Do",
+                          :country_of_origin  => "Korea")
+  style = Style.create!(  :name               => "Tae Kwon Do",
+                          :country_of_origin  => "Korea")
+  style = Style.create!(  :name               => "Jiu Jitsu",
+                          :country_of_origin  => "Japan")
 end
