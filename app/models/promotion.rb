@@ -20,6 +20,7 @@ class Promotion < ActiveRecord::Base
   validates :rank,            :presence => true
   validates :user_id,         :presence => true
   validates :promotion_date,  :presence => true
+  validates :style_id,        :presence => true
 
   default_scope :order => 'promotions.created_at desc'
 

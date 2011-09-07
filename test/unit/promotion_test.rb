@@ -3,7 +3,9 @@ require 'test_helper'
 class PromotionTest < ActiveSupport::TestCase
   test "should belong to a style" do
     rank_black  = promotions(:black)
-
+    assert rank_black.invalid?
+    
+    rank_black.style = styles(:tsd)
     assert rank_black.valid?
   end
 

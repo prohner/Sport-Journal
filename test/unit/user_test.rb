@@ -59,9 +59,11 @@ class UserTest < ActiveSupport::TestCase
   end
   
   test "should have promotions descending by date" do
-    user        = users(:one)
-    rank_black  = promotions(:black)
-    rank_red    = promotions(:red)
+    user              = users(:one)
+    rank_black        = promotions(:black)
+    rank_black.style  = styles(:tsd)
+    rank_red          = promotions(:red)
+    rank_red.style    = styles(:tsd)
     user.promotions << rank_black
     user.promotions << rank_red
     assert user.promotions.count == 2
@@ -73,6 +75,7 @@ class UserTest < ActiveSupport::TestCase
   test "should have promotions" do
     user = users(:one)
     rank_black  = promotions(:black)
+    rank_black.style = styles(:tsd)
     user.promotions << rank_black
     assert user.promotions.count == 1
     assert user.save!
