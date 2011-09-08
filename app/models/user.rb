@@ -15,6 +15,7 @@
 class User < ActiveRecord::Base
   has_many :workout_sessions
   has_many :promotions
+  has_many :techniques
   
   email_regex = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
 

@@ -7,6 +7,7 @@ namespace :db do
     make_users
     make_promotions
     make_workouts
+    make_techniques
   end
 end
 
@@ -57,4 +58,13 @@ def make_styles
                           :country_of_origin  => "Korea")
   style = Style.create!(  :name               => "Jiu Jitsu",
                           :country_of_origin  => "Japan")
+end
+
+
+def make_techniques
+  user = User.first
+  Technique.create!(  :user => user, :name => "Roundhouse Kick")
+  Technique.create!(  :user => user, :name => "Front stretch Kick")
+  Technique.create!(  :user => user, :name => "Inside-to-outside Kick")
+  Technique.create!(  :user => user, :name => "Outside-to-inside Kick")
 end
