@@ -5,5 +5,8 @@
    <div class="workout_date">
       <%= workout_session.workout_date %>
    </div>
+   
+   <%= render workout_session.technique_repetitions %>
+   
 <%= link_to "delete", workout_session, :method => :delete, :confirm => "Delete?", :title => "yo" %>   
 </div>

@@ -14,8 +14,10 @@
 class WorkoutSession < ActiveRecord::Base
 
   belongs_to :user
+  has_many :technique_repetitions
 
-  validates :description,   :presence => true
+  validates :description,   :presence => true,
+                            :length   => { :minimum => 3 }
   validates :user_id,       :presence => true
   validates :workout_date,  :presence => true
 

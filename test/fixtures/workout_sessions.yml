@@ -32,3 +32,7 @@ old:
   description: MyString
   user_id: 1
   workout_date: 2011-01-01
+
+no_description:
+  user_id: 1
+  workout_date: 2011-01-01

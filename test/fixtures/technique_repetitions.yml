@@ -1,0 +1,32 @@
+# == Schema Information
+# Schema version: 20110908035818
+#
+# Table name: technique_repetitions
+#
+#  id                 :integer         not null, primary key
+#  technique_id       :integer
+#  user_id            :integer
+#  repetitions        :integer
+#  workout_session_id :integer
+#  created_at         :datetime
+#  updated_at         :datetime
+#
+
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  technique_id: 1
+  user_id: 1
+  repetitions: 1
+  workout_session_id: 1
+
+two:
+  technique_id: 1
+  user_id: 1
+  repetitions: 5
+  workout_session_id: 1
+
+user_less:
+  technique_id: 1
+  repetitions: 5
+  workout_session_id: 1

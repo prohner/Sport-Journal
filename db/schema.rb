@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110908031037) do
+ActiveRecord::Schema.define(:version => 20110910035042) do
 
   create_table "promotions", :force => true do |t|
     t.string   "rank"
@@ -28,11 +28,21 @@ ActiveRecord::Schema.define(:version => 20110908031037) do
     t.datetime "updated_at"
   end
 
+  create_table "technique_repetitions", :force => true do |t|
+    t.integer  "technique_id"
+    t.integer  "user_id"
+    t.integer  "repetitions"
+    t.integer  "workout_session_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "techniques", :force => true do |t|
     t.string   "name"
     t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "description"
   end
 
   create_table "users", :force => true do |t|

@@ -6,8 +6,8 @@ namespace :db do
     make_styles
     make_users
     make_promotions
-    make_workouts
     make_techniques
+    make_workouts
   end
 end
 
@@ -31,11 +31,24 @@ end
 
 def make_workouts
   user = User.first
-  user.workout_sessions << WorkoutSession.new(:description  => "description of the first workout",
-                                              :workout_date => "6/2/2011")
-  user.workout_sessions << WorkoutSession.new(:description  => "description of the second workout",
-                                              :workout_date => "6/5/2011")
+  tech1 = Technique.first
+  tech2 = Technique.last
+  
+  workout_session = WorkoutSession.new( :description  => "description of the first workout",
+                                        :workout_date => "6/2/2011")
+  tech_rep = TechniqueRepetition.new( :technique_id => tech1.id, :user_id  => user, :repetitions  => 10)
+  workout_session.technique_repetitions << tech_rep
+  
+  user.workout_sessions << workout_session
+                                              
+  workout_session2 = WorkoutSession.new( :description  => "description of the second workout",
+                                        :workout_date => "6/5/2011")
+  tech_rep2 = TechniqueRepetition.new( :technique_id => tech2.id, :user_id  => user, :repetitions  => 20)
+  workout_session2.technique_repetitions << tech_rep2
+  user.workout_sessions << workout_session2
   user.save!
+  
+  
 end
 
 
