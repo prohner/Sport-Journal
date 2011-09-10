@@ -19,7 +19,7 @@ class TechniqueRepetition < ActiveRecord::Base
 
   validates :repetitions,         :presence => true,
                                   :numericality => {  :only_integer => true,
-                                                      :minimum      => 1 }
+                                                      :greater_than => 0 }
   validates :user_id,             :presence => true
   validates :technique_id,        :presence => true
   validates :workout_session_id,  :presence => true

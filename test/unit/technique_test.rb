@@ -6,10 +6,10 @@ class TechniqueTest < ActiveSupport::TestCase
     technique = Technique.new
     assert technique.invalid?
     
-    technique.description = "ab"
+    technique.name = "ab"
     assert technique.invalid?
     
-    technique.description = "punch"
+    technique.name = "punch"
     assert technique.valid?
   end
 end

@@ -38,6 +38,9 @@ def make_workouts
                                         :workout_date => "6/2/2011")
   tech_rep = TechniqueRepetition.new( :technique_id => tech1.id, :user_id  => user, :repetitions  => 10)
   workout_session.technique_repetitions << tech_rep
+
+#  tech_rep2 = TechniqueRepetition.new( :technique_id => tech2.id, :user_id  => user, :repetitions  => 20)
+#  workout_session.technique_repetitions << tech_rep2
   
   user.workout_sessions << workout_session
                                               
