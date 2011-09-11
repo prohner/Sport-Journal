@@ -34,21 +34,34 @@ def make_workouts
   tech1 = Technique.first
   tech2 = Technique.last
   
-  workout_session = WorkoutSession.new( :description  => "description of the first workout",
-                                        :workout_date => "6/2/2011")
-  tech_rep = TechniqueRepetition.new( :technique_id => tech1.id, :user_id  => user, :repetitions  => 10)
-  workout_session.technique_repetitions << tech_rep
+  workout_session = WorkoutSession.create!( :description  => "description of the first workout",
+                                            :workout_date => "6/2/2011",
+                                            :user => user)
+  tech_rep = TechniqueRepetition.create!( :technique => tech1, 
+                                          :user  => user, 
+                                          :repetitions  => 10,
+                                          :workout_session => workout_session)
 
-#  tech_rep2 = TechniqueRepetition.new( :technique_id => tech2.id, :user_id  => user, :repetitions  => 20)
-#  workout_session.technique_repetitions << tech_rep2
+  tech_rep = TechniqueRepetition.create!( :technique => tech2, 
+                                          :user  => user, 
+                                          :repetitions  => 13,
+                                          :workout_session => workout_session)
+  user.workout_sessions << workout_session
   
+  workout_session = WorkoutSession.create!( :description  => "description of the second workout",
+                                            :workout_date => "6/2/2011",
+                                            :user => user)
+  tech_rep = TechniqueRepetition.create!( :technique => tech2, 
+                                          :user  => user, 
+                                          :repetitions  => 16,
+                                          :workout_session => workout_session)
   user.workout_sessions << workout_session
                                               
-  workout_session2 = WorkoutSession.new( :description  => "description of the second workout",
-                                        :workout_date => "6/5/2011")
-  tech_rep2 = TechniqueRepetition.new( :technique_id => tech2.id, :user_id  => user, :repetitions  => 20)
-  workout_session2.technique_repetitions << tech_rep2
-  user.workout_sessions << workout_session2
+  #workout_session2 = WorkoutSession.new(  :description  => "description of the second workout",
+  #                                        :workout_date => "6/5/2011")
+  #tech_rep2 = TechniqueRepetition.new( :technique_id => tech2.id, :user_id  => user, :repetitions  => 20)
+  #workout_session2.technique_repetitions << tech_rep2
+  #user.workout_sessions << workout_session2
   user.save!
   
   

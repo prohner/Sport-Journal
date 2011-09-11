@@ -80,4 +80,5 @@ class UserTest < ActiveSupport::TestCase
     assert user.promotions.count == 1
     assert user.save!
   end
+  
 end
