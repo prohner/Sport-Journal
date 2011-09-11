@@ -1,0 +1,9 @@
+<div style="background-color:#f0f0f0; xwidth:125px;">
+   BEGIN CLOUD<BR/>
+   <%= tag_cloud(@tags, %w(css1 css2 css3 css4 css5 css6)) do |tag, css_class| %>
+      <%= link_to tag.name, { :action => "show", :id => tag.name }, :class => css_class %>
+      (<%= WorkoutSession.tagged_with(tag.name).count %>)
+      &nbsp;
+    <% end %>
+    END OF CLOUD<BR/>
+</div>

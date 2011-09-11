@@ -14,6 +14,10 @@
       <td class="sidebar round">
          Style: <span class="martial_arts_style"><%= @user.style %></span>
          <%= render 'promotions/promotion_history' %>
+      
+         <div class="tag_cloud">
+            <%= render 'workout_sessions/workout_session_tag_cloud' %>
+         </div>
       </td>
    </tr>
 </table>
