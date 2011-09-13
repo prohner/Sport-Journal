@@ -1,7 +1,7 @@
 
 <table class="profile" summary="Profile Information">
    <tr>
-      <td class="main">
+      <td class="main" valign="top">
          <h1><%= @user.firstname %> <%= @user.lastname %></h1>
 
          <div class="workouts">
@@ -15,8 +15,9 @@
          Style: <span class="martial_arts_style"><%= @user.style %></span>
          <%= render 'promotions/promotion_history' %>
       
-         <div class="tag_cloud">
-            <%= render 'workout_sessions/workout_session_tag_cloud' %>
+
+         <div style="background-color:#f0f0f0; xwidth:125px;">
+            <%= render :partial => "workout_sessions/workout_session_tag_cloud" %>
          </div>
       </td>
    </tr>
