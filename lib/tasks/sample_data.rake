@@ -46,6 +46,7 @@ def make_workouts
                                           :user  => user, 
                                           :repetitions  => 13,
                                           :workout_session => workout_session)
+  workout_session.tag_list = "forms,self-defense"
   user.workout_sessions << workout_session
   
   workout_session = WorkoutSession.create!( :description  => "description of the second workout",
@@ -55,13 +56,9 @@ def make_workouts
                                           :user  => user, 
                                           :repetitions  => 16,
                                           :workout_session => workout_session)
+  workout_session.tag_list = "kicks,forms,jumps"
   user.workout_sessions << workout_session
                                               
-  #workout_session2 = WorkoutSession.new(  :description  => "description of the second workout",
-  #                                        :workout_date => "6/5/2011")
-  #tech_rep2 = TechniqueRepetition.new( :technique_id => tech2.id, :user_id  => user, :repetitions  => 20)
-  #workout_session2.technique_repetitions << tech_rep2
-  #user.workout_sessions << workout_session2
   user.save!
   
   

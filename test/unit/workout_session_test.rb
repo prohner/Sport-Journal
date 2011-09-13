@@ -25,5 +25,12 @@ class WorkoutSessionTest < ActiveSupport::TestCase
     workout.user = User.first
     assert workout.valid?
   end
+
+  test "should have tagging" do
+    workout  = workout_sessions(:one)
+    assert workout.valid?
+    
+    assert_respond_to(workout, :tag_list )
+  end
 end
 

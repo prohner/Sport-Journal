@@ -6,6 +6,12 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     @workout_session = WorkoutSession.new
+    @tags = WorkoutSession.tag_counts_on(:tags)
+    
+    @s = ""
+    @tags.each do |f|
+      @s << f.to_s
+    end
   end
   
   def new
@@ -24,4 +30,5 @@ class UsersController < ApplicationController
       end
     end
   end
+
 end

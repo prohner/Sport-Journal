@@ -32,8 +32,10 @@ class UsersControllerTest < ActionController::TestCase
     end
   end
 
-  test "should get 'show' and have workout sessions " do
+  test "should get 'show' and have workout sessions and a tag_cloud " do
     workout_session = workout_sessions(:one)
+    the_tag = "forms"
+    workout_session.tag_list = the_tag
     @user.workout_sessions << workout_session
     assert @user.save!
     
@@ -41,6 +43,7 @@ class UsersControllerTest < ActionController::TestCase
     assert_response :success
     
     assert_select '.workout', workout_session.description
+    assert_select '.tag_cloud', /forms/
     
   end
   

@@ -7,6 +7,7 @@ gem 'rails', '3.0.7'
 
 gem 'sqlite3'
 gem 'jquery-rails', '>= 1.0.12'
+gem 'acts-as-taggable-on', '~>2.1.0'
 
 # Use unicorn as the web server
 # gem 'unicorn'

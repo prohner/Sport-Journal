@@ -28,6 +28,8 @@ GEM
       activemodel (= 3.0.7)
       activesupport (= 3.0.7)
     activesupport (3.0.7)
+    acts-as-taggable-on (2.1.1)
+      rails
     annotate-models (1.0.4)
     arel (2.0.9)
     builder (2.1.2)
@@ -74,6 +76,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  acts-as-taggable-on (~> 2.1.0)
   annotate-models (= 1.0.4)
   faker (= 0.3.1)
   jquery-rails (>= 1.0.12)
