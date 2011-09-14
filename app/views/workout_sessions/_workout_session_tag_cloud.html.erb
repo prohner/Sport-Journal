@@ -1,4 +1,4 @@
-<div class="tag_cloud" style="background-color:#f0f0f0; xwidth:125px;">
+<div class="tagcloud round">
     <% tag_cloud @tags, %w(css1 css2 css3 css4 css5 css6) do |name, count, css_class| %>
       <%= link_to name, { :action => "show", :id => name }, :class => css_class %>
       (<%= count %>)&nbsp; &nbsp; &nbsp;

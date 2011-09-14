@@ -58,6 +58,34 @@ def make_workouts
                                           :workout_session => workout_session)
   workout_session.tag_list = "kicks,forms,jumps"
   user.workout_sessions << workout_session
+  
+  workout_session = WorkoutSession.create!( :description  => "description of the third workout",
+                                            :workout_date => "6/12/2011",
+                                            :user => user)
+  tech_rep = TechniqueRepetition.create!( :technique => tech1, 
+                                          :user  => user, 
+                                          :repetitions  => 10,
+                                          :workout_session => workout_session)
+  tech_rep = TechniqueRepetition.create!( :technique => tech2, 
+                                          :user  => user, 
+                                          :repetitions  => 15,
+                                          :workout_session => workout_session)
+  workout_session.tag_list = "kicks,forms,one-step"
+  user.workout_sessions << workout_session
+  
+  workout_session = WorkoutSession.create!( :description  => "description of the fourth workout",
+                                            :workout_date => "6/15/2011",
+                                            :user => user)
+  tech_rep = TechniqueRepetition.create!( :technique => tech1, 
+                                          :user  => user, 
+                                          :repetitions  => 12,
+                                          :workout_session => workout_session)
+  tech_rep = TechniqueRepetition.create!( :technique => tech2, 
+                                          :user  => user, 
+                                          :repetitions  => 18,
+                                          :workout_session => workout_session)
+  workout_session.tag_list = "bo staff,forms"
+  user.workout_sessions << workout_session
                                               
   user.save!
   

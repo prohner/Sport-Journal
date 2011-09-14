@@ -91,11 +91,12 @@ body {
 }
 
 .tagcloud {
-   margin-top: 20px;
+   margin: 20px;
    padding: 3px;
    border-style: dotted;
    border-width:1px;
    width: 250px;
+   background-color: #dda;
 }
 
 .tagcloud_tag {
