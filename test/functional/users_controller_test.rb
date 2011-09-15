@@ -43,7 +43,7 @@ class UsersControllerTest < ActionController::TestCase
     assert_response :success
     
     assert_select '.workout', workout_session.description
-    assert_select '.tag_cloud', /forms/
+    assert_select '.tagcloud', /forms/
     
   end
   
