@@ -1,4 +1,6 @@
 SportJournal::Application.routes.draw do
+  get "tags/show"
+
   get "workout_sessions/create"
 
   resources :users, :only => [:index, :show, :new, :create]
