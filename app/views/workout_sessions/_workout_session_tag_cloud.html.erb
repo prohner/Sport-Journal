@@ -1,5 +1,5 @@
 <div class="tagcloud round">
-    <% tag_cloud @tags, %w(css1 css2 css3 css4 css5 css6) do |name, count, css_class| %>
+    <% tag_cloud @tags, %w(tagcloud1 tagcloud2 tagcloud3 tagcloud4 tagcloud5 tagcloud6) do |name, count, css_class| %>
       <%= link_to name, { :action => "show", :id => name }, :class => css_class %>
       (<%= count %>)&nbsp; &nbsp; &nbsp;
     <% end %>    
