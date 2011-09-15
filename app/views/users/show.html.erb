@@ -15,10 +15,7 @@
          Style: <span class="martial_arts_style"><%= @user.style %></span>
          <%= render 'promotions/promotion_history' %>
       
-
-         <div style="background-color:#f0f0f0; xwidth:125px;">
-            <%= render :partial => "workout_sessions/workout_session_tag_cloud" %>
-         </div>
+         <%= render :partial => "workout_sessions/workout_session_tag_cloud" %>
       </td>
    </tr>
 </table>
