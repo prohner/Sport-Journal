@@ -16,6 +16,14 @@ class WorkoutSessionTest < ActiveSupport::TestCase
     workout.description = "worked out"
     assert workout.valid?
   end
+  
+  test "should have a default work out date" do
+    workout  = workout_sessions(:one)
+    assert workout.valid?
+    
+    assert workout.save!
+    assert_not_nil workout.workout_date
+  end
 
   test "should belong to a person" do
     workout  = WorkoutSession.new(  :description  => "great times",
