@@ -2,7 +2,7 @@ class WorkoutSessionsController < ApplicationController
   def create
     workout_session = WorkoutSession.create(params[:workout_session])
     workout_session.workout_date = DateTime.new
-    user = session[:user]
+    user = get_current_user
     workout_session.user = user
     
     workout_session.save!
