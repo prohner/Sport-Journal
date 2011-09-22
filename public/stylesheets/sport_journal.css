@@ -4,11 +4,11 @@ body {
 }
 
 .karatejournal {
-  background: #cff;
+  background: #fff;
 }
 
 .main_container {
-   background-color:#f0f0f0;
+   background-color:#f9f9f9;
    width:800px;
    display:block;
    font-family:sans-serif;
@@ -59,7 +59,7 @@ body {
 }
 
 .entry {
-   background-color:#bbb;
+   background-color:#ddd;
    width:500px;
    margin-bottom: 5px;
 }
@@ -87,7 +87,7 @@ body {
 
 .sidebar {
    float: right;
-   background-color: #ffc;
+   background-color: #e9e9e9;
 }
 
 .tagcloud {
@@ -151,13 +151,12 @@ body {
 	color:#333;
 }
 
-.tagcloud1 { font-size: 1.0em; color: #c0c0c0; }
-.tagcloud2 { font-size: 1.3em; color: #a0a0a0; }
-.tagcloud3 { font-size: 1.6em; color: #909090; }
-.tagcloud4 { font-size: 1.9em; color: #707070; }
-.tagcloud5 { font-size: 2.2em; color: #505050; }
-.tagcloud6 { font-size: 2.5em; color: #303030; }
-
+.tagcloud1 { font-size: 1.0em; color: #fff; background-color:#000055; }
+.tagcloud2 { font-size: 1.3em; color: #fff; background-color:#000077; }
+.tagcloud3 { font-size: 1.6em; color: #fff; background-color:#000099; }
+.tagcloud4 { font-size: 1.9em; color: #fff; background-color:#0000bb; }
+.tagcloud5 { font-size: 2.2em; color: #fff; background-color:#0000dd; }
+.tagcloud6 { font-size: 2.5em; color: #fff; background-color:#0000ff;  }
 
 .tags {
    background-color:#ddd;

@@ -5,6 +5,7 @@ class UsersController < ApplicationController
   
   def show
     @user = User.find(params[:id])
+    session[:user_id] = @user.id
     @workout_session = WorkoutSession.new
     @tags = WorkoutSession.tag_counts_on(:tags)
     

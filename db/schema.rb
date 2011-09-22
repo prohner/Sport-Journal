@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110911052327) do
+ActiveRecord::Schema.define(:version => 20110921044709) do
 
   create_table "promotions", :force => true do |t|
     t.string   "rank"
@@ -74,7 +74,7 @@ ActiveRecord::Schema.define(:version => 20110911052327) do
   create_table "workout_sessions", :force => true do |t|
     t.string   "description"
     t.integer  "user_id"
-    t.date     "workout_date"
+    t.datetime "workout_date"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
