@@ -11,6 +11,8 @@ class UsersController < ApplicationController
     @s = ""
     @tags.each do |f|
       @s << f.to_s
+      @s << " | "
+      
     end
   end
   

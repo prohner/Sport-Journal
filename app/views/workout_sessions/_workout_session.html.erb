@@ -8,5 +8,15 @@
    
    <%= render workout_session.technique_repetitions %>
    
+   <div id="tags">
+      <% unless workout_session.tags.empty? %>
+         <p class="tags">
+            <%= render  :partial    => 'workout_sessions/tag_list_for_workout_session',  
+                        :collection => workout_session.tags, 
+                        :as         => :tag %>
+         </p>
+      <% end%>
+   </div>
+   
 <%= link_to "delete", workout_session, :method => :delete, :confirm => "Delete?", :title => "yo" %>   
 </div>
