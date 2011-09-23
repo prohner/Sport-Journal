@@ -8,16 +8,17 @@
    
    <%= render workout_session.technique_repetitions %>
    
-   <div id="tags" class="tag_list">
-      Tags: 
-      <% unless workout_session.tags.empty? %>
-            <%= render  :partial    => 'workout_sessions/tag_list_for_workout_session',  
-                        :collection => workout_session.tags, 
-                        :as         => :tag %>
-      <% else %>
-         &lt;sigh&gt; None
-      <% end %>
+   NEED TEST TO VERIFY TAG LIST
+   <div class="workout_tags">
+      <ul id="tags" class="tag_list">
+         <% unless workout_session.tags.empty? %>
+               <%= render  :partial    => 'workout_sessions/tag_list_for_workout_session',  
+                           :collection => workout_session.tags, 
+                           :as         => :tag %>
+         <% else %>
+            &lt;sigh&gt; None
+         <% end %>
+      </ul>
    </div>
-   
 <%= link_to "delete", workout_session, :method => :delete, :confirm => "Delete?", :title => "yo" %>   
 </div>
