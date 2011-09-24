@@ -142,20 +142,25 @@ body {
 	color:#333;
 }
 
-ul.tag_list {
-	margin: 0;
-	padding: 0;
-}
-
 .tag_list {
-	background-color:#f0f0f0;
-	margin: 2px;
 	width: auto;
 	min-width: 0;
 	display:table;
 	font-size: 10px;
+
+	background-color:#ddd;
+	padding-left: 2px;
+	padding-right: 2px;
+	margin-top: 4px;
+	margin-bottom: 4px;
+	margin-left: 4px;
+	margin-right: 4px;
 }
 
+ul.tag_list {
+	margin: 0;
+	padding: 0;
+}
 
 .tag_list li {
 	list-style-type:none;
@@ -175,16 +180,6 @@ ul.tag_list {
 	margin-right: 4px;
 }
 
-.tag_list {
-	background-color:#ddd;
-	padding-left: 2px;
-	padding-right: 2px;
-	margin-top: 4px;
-	margin-bottom: 4px;
-	margin-left: 4px;
-	margin-right: 4px;
-}
-
 .tag_list a  {
 	display: block;
 	border: 1px solid;
@@ -200,53 +195,64 @@ ul.tag_list {
 	border-color: #000 #aaa #aaa #000;
 }
 
-.tagcloud {
-	margin: 20px;
-	padding: 3px;
-	border-width:1px;
-	background-color: #ffc;
-
-	margin: 2px;
+.tag_cloud {
 	width: auto;
 	min-width: 0;
 	display:table;
 	font-size: 10px;
+
+	background-color:#ddd;
+	padding-left: 2px;
+	padding-right: 2px;
+	margin-top: 4px;
+	margin-bottom: 4px;
+	margin-left: 4px;
+	margin-right: 4px;
 }
 
-.tagcloud li {
+ul.tag_cloud {
+	margin: 0;
+	padding: 0;
+}
+
+.tag_cloud li {
 	list-style-type:none;
 	display:inline;
-	padding: 3px;
-	margin: 2px;
 }
 
-
-.tagcloud_tag a {
-	text-decoration: none;
-	color: #fff;
-}
-
-.tagcloud_tag {
+.tag_cloud li a {
 	float: left;
 	display: block;
+	padding: 3px 10px;
+	background: #016fac url(bg-topnav.jpg) repeat-x;
 	margin: 0 1px 0 0;
 	text-align: center;
 	text-decoration: none;
 	color: #fff;
-	
 }
 
-.tagcloud_tag a:hover {
+.tag_cloud a  {
+	display: block;
+	border: 1px solid;
+	border-color: #aaa #000 #000 #aaa;
+	width: 8em;
+	background: #fc0;
+}
+
+.tag_cloud a:hover {
 	position: relative;
 	top: 1px;
 	left: 1px;
 	border-color: #000 #aaa #aaa #000;
 }
 
-.tagcloud1 { font-size: 1.0em; color: #fff; background-color:#000055; }
-.tagcloud2 { font-size: 1.3em; color: #fff; background-color:#000077; }
-.tagcloud3 { font-size: 1.6em; color: #fff; background-color:#000099; }
-.tagcloud4 { font-size: 1.9em; color: #fff; background-color:#0000bb; }
-.tagcloud5 { font-size: 2.2em; color: #fff; background-color:#0000dd; }
-.tagcloud6 { font-size: 2.5em; color: #fff; background-color:#0000ff; }
+
+
+
+.tagcloud1 { margin:2em; font-size: 1.0em; color: #fff; background-color:#000055; }
+.tagcloud2 { margin:4em; font-size: 1.3em; color: #fff; background-color:#000077; }
+.tagcloud3 { margin:6em; font-size: 1.6em; color: #fff; background-color:#000099; }
+.tagcloud4 { margin:8em; font-size: 1.9em; color: #fff; background-color:#0000bb; }
+.tagcloud5 { margin:10em; font-size: 2.2em; color: #fff; background-color:#0000dd; }
+.tagcloud6 { margin:12em; font-size: 2.5em; color: #fff; background-color:#0000ff; }
 

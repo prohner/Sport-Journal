@@ -1,9 +1,9 @@
  <div class="round">
-    <ul id="tagcloud" class="tagcloud round">
+    <ul id="tag_cloud" class="tag_cloud round">
        <% tag_cloud @tags, %w(tagcloud1 tagcloud2 tagcloud3 tagcloud4 tagcloud5 tagcloud6) do |name, count, css_class| %>
-         <li class="tagcloud_tag <%= css_class %>">
-            <%= link_to name, { :controller => "tags", :action => "show", :id => name } %>
-            (<%= count %>)
+         <li class="tag_cloud">
+            <%= link_to "#{name} (#{count})", { :controller => "tags", :action => "show", :id => name } %>
+            
          </li>
        <% end %>    
     </ul>
