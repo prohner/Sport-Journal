@@ -2,7 +2,7 @@
     <ul id="tag_cloud" class="tag_cloud round">
        <% tag_cloud @tags, %w(tagcloud1 tagcloud2 tagcloud3 tagcloud4 tagcloud5 tagcloud6) do |name, count, css_class| %>
          <li class="tag_cloud">
-            <%= link_to "#{name} (#{count})", { :controller => "tags", :action => "show", :id => name } %>
+            <%= link_to "#{name} (#{count})", { :controller => "tags", :action => "show", :id => name }, :class => "round" %>
             
          </li>
        <% end %>    
