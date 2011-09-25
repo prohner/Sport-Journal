@@ -6,6 +6,8 @@
       <%= f.text_area :description, :cols => "50", :rows => "5" %>
       <br />
       <%= link_to_function "Add Technique", :id => "add_technique" %>
+      <br />
+      <%= link_to_function "Add Tag", :id => "add_tag" %>
 
       <div class="actions">
       <%= f.submit "Submit" %>
@@ -25,14 +27,34 @@ $(document).ready(function(){
   });
 });
 
+$(document).ready(function(){
+  $('#add_tag').click(function(event){ 
+     $("#tag_dialog").dialog({modal:true, 
+                                       title:'Tags', 
+                                       position:[event.clientX,event.clientY]});
+
+    return false; //cancel the browser's traditional event.
+  });
+});
+
 </script>
 
-<%= form_tag '#', :id => 'new_subscription' do%>
+<%= form_tag '#', :id => 'new_subscription' do %>
     <div id="subscription_dialog" class="modal_dialog" style="display:none;">
 
         <div class="category-wrapper">
             <div class="category">
                Here's the stuff
+            </div>
+        </div>
+</div>
+<% end %>
+<%= form_tag '#', :id => 'new_subscription' do %>
+    <div id="tag_dialog" class="modal_dialog" style="display:none;">
+
+        <div class="category-wrapper">
+            <div class="category">
+               List of tag checkboxes
             </div>
         </div>
 </div>
