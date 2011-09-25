@@ -171,7 +171,7 @@ ul.tag_list {
 	float: left;
 	display: block;
 	padding: 3px 10px;
-	background: #016fac url(bg-topnav.jpg) repeat-x;
+	background: #016fac;
 	margin: 0 1px 0 0;
 	text-align: center;
 	text-decoration: none;
@@ -224,7 +224,7 @@ ul.tag_cloud {
 	float: left;
 	display: block;
 	padding: 3px 10px;
-	background: #016fac url(bg-topnav.jpg) repeat-x;
+	background: #016fac;
 	margin: 0 1px 0 0;
 	text-align: center;
 	text-decoration: none;
