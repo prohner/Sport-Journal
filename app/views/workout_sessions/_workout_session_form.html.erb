@@ -7,12 +7,15 @@
       <br />
       <%= link_to_function "Add Technique", :id => "add_technique" %>
       <br />
+      <div id="new_tag_list">
+      </div>
       <%= link_to_function "Add Tag", :id => "add_tag" %>
 
       <div class="actions">
       <%= f.submit "Submit" %>
       </div>
   
+      <%= hidden_field_tag "new_tags" %>
   </fieldset>
 <% end %>
 
@@ -37,6 +40,24 @@ $(document).ready(function(){
   });
 });
 
+function add_tags_to_form() {
+   alert('save the tags');
+   $("#tag_dialog").dialog("close");
+}
+
+function tag_checkbox_checked() {
+   var tagHTMLText = "";
+   $('#tag_dialog input:checked').each(function() {
+      if (tagHTMLText != "") {
+         tagHTMLText += ", ";
+      }
+      tagHTMLText += $(this).attr('checked_value');
+   });
+
+   $('#new_tag_list').html("Tags: " + tagHTMLText);
+   $('#new_tags').html(tagHTMLText);
+}
+
 </script>
 
 <%= form_tag '#', :id => 'new_subscription' do %>
@@ -58,6 +79,7 @@ $(document).ready(function(){
                            :collection => @tags, 
                            :as         => :tag,
                            :locals     => { :form => form } %>
+               <%= submit_tag "All Done", :onclick => "add_tags_to_form(); return true;" %>
             </div>
         </div>
 </div>
