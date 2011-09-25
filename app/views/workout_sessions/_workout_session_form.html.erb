@@ -49,12 +49,15 @@ $(document).ready(function(){
         </div>
 </div>
 <% end %>
-<%= form_tag '#', :id => 'new_subscription' do %>
+<%= form_for '#', :id => 'new_subscription' do |form| %>
     <div id="tag_dialog" class="modal_dialog" style="display:none;">
 
         <div class="category-wrapper">
             <div class="category">
-               List of tag checkboxes
+               <%= render  :partial    => 'workout_sessions/tag_checkbox',  
+                           :collection => @tags, 
+                           :as         => :tag,
+                           :locals     => { :form => form } %>
             </div>
         </div>
 </div>
